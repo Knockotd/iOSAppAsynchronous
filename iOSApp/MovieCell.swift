@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+ 
 class MovieCell: UITableViewCell {
     @IBOutlet weak var lblGenre: UILabel!
     @IBOutlet weak var lblRating: UILabel!

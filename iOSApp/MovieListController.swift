@@ -143,7 +143,7 @@ class MovieListController: UITableViewController {
         DispatchQueue.main.async(execute: {
             cell.thumbnailImage.image = self.getThumnailImage(indexPath.row)
         })
-        
+         
         return cell
     }
     
