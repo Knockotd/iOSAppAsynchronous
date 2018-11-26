@@ -75,6 +75,22 @@ class MovieListController: UITableViewController {
         refreshControl.endRefreshing()
     }
     
+    //인덱스에 해당하는 UIImage를 리턴하는 메소드
+    func getThumnailImage(_ index : Int) -> UIImage{
+        //배열에서 인덱스에 해당하는 데이터 가져오기
+        var movie = self.list[index]
+        //이미지가 있으면 바로 리턴
+        if let savedImage = movie.image{
+            return savedImage
+        }else{
+            //이미지가 없으면 다운로드 받아서 리턴
+            let url : URL! = URL(string: movie.thumbnailImage!)
+            let imageData = try! Data(contentsOf: url)
+            movie.image = UIImage(data: imageData)
+            return movie.image!
+        }
+    }
+    
     
     //파싱한 결과를 저장할 List 변수 - 지연생성 이용
     //지연생성 - 처음부터 만들어두지 않고 처음 사용할 때 생성
@@ -122,7 +138,11 @@ class MovieListController: UITableViewController {
         cell.lblTitle.text = movie.title!
         cell.lblGenre.text = movie.genreNames!
         cell.lblRating.text = "\(movie.ratingAverage!)"
-        cell.thumbnailImage.image = movie.image!
+        //cell.thumbnailImage.image = movie.image!
+        //비동기적으로 이미지 출력
+        DispatchQueue.main.async(execute: {
+            cell.thumbnailImage.image = self.getThumnailImage(indexPath.row)
+        })
         
         return cell
     }
