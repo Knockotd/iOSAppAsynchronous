@@ -18,6 +18,7 @@
 		25A682E321AB8888008478DB /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A682E221AB8888008478DB /* MovieListController.swift */; };
 		AAE609CD21ACE4DA00793595 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609CC21ACE4DA00793595 /* DetailViewController.swift */; };
 		AAE609CF21ACF9B800793595 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609CE21ACF9B800793595 /* TheaterListController.swift */; };
+		AAE609D121AD11FF00793595 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609D021AD11FF00793595 /* TheaterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		25A682E221AB8888008478DB /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
 		AAE609CC21ACE4DA00793595 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AAE609CE21ACF9B800793595 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
+		AAE609D021AD11FF00793595 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				251EBBCE21ABA6840048CB93 /* MovieCell.swift */,
 				AAE609CC21ACE4DA00793595 /* DetailViewController.swift */,
 				AAE609CE21ACF9B800793595 /* TheaterListController.swift */,
+				AAE609D021AD11FF00793595 /* TheaterCell.swift */,
 			);
 			path = iOSApp;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				259640F421AB861500A47DBE /* ViewController.swift in Sources */,
 				251EBBCF21ABA6840048CB93 /* MovieCell.swift in Sources */,
 				AAE609CF21ACF9B800793595 /* TheaterListController.swift in Sources */,
+				AAE609D121AD11FF00793595 /* TheaterCell.swift in Sources */,
 				259640F221AB861500A47DBE /* AppDelegate.swift in Sources */,
 				259640FA21AB861500A47DBE /* iOSApp.xcdatamodeld in Sources */,
 				251EBBCD21AB9ABF0048CB93 /* MovieVO.swift in Sources */,
