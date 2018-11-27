@@ -16,6 +16,8 @@
 		259640FC21AB861600A47DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259640FB21AB861600A47DBE /* Assets.xcassets */; };
 		259640FF21AB861600A47DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259640FD21AB861600A47DBE /* LaunchScreen.storyboard */; };
 		25A682E321AB8888008478DB /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A682E221AB8888008478DB /* MovieListController.swift */; };
+		AAE609CD21ACE4DA00793595 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609CC21ACE4DA00793595 /* DetailViewController.swift */; };
+		AAE609CF21ACF9B800793595 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609CE21ACF9B800793595 /* TheaterListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		259640FE21AB861600A47DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2596410021AB861600A47DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25A682E221AB8888008478DB /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
+		AAE609CC21ACE4DA00793595 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		AAE609CE21ACF9B800793595 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				25A682E221AB8888008478DB /* MovieListController.swift */,
 				251EBBCC21AB9ABF0048CB93 /* MovieVO.swift */,
 				251EBBCE21ABA6840048CB93 /* MovieCell.swift */,
+				AAE609CC21ACE4DA00793595 /* DetailViewController.swift */,
+				AAE609CE21ACF9B800793595 /* TheaterListController.swift */,
 			);
 			path = iOSApp;
 			sourceTree = "<group>";
@@ -150,9 +156,11 @@
 				25A682E321AB8888008478DB /* MovieListController.swift in Sources */,
 				259640F421AB861500A47DBE /* ViewController.swift in Sources */,
 				251EBBCF21ABA6840048CB93 /* MovieCell.swift in Sources */,
+				AAE609CF21ACF9B800793595 /* TheaterListController.swift in Sources */,
 				259640F221AB861500A47DBE /* AppDelegate.swift in Sources */,
 				259640FA21AB861500A47DBE /* iOSApp.xcdatamodeld in Sources */,
 				251EBBCD21AB9ABF0048CB93 /* MovieVO.swift in Sources */,
+				AAE609CD21ACE4DA00793595 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

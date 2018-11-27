@@ -33,14 +33,86 @@
                     </view>
                     <navigationItem key="navigationItem" id="S6N-WY-bjz"/>
                     <connections>
-                        <segue destination="2cM-gM-BSp" kind="show" id="90Q-Gq-pSc"/>
+                        <segue destination="cjn-FH-ddM" kind="show" id="90Q-Gq-pSc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="876" y="56"/>
         </scene>
-        <!--Movie List Controller-->
+        <!--Detail View Controller-->
+        <scene sceneID="5lo-Lp-hUu">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="dN0-pt-RUu" customClass="DetailViewController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PIY-L9-Qkg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xid-Gi-f2U">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Hd8-1J-op8">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fFd-Q1-DHs" firstAttribute="bottom" secondItem="Hd8-1J-op8" secondAttribute="bottom" constant="324" id="3W0-Al-9H3"/>
+                            <constraint firstItem="Hd8-1J-op8" firstAttribute="leading" secondItem="fFd-Q1-DHs" secondAttribute="leading" constant="177" id="FG9-yR-gey"/>
+                            <constraint firstItem="xid-Gi-f2U" firstAttribute="top" secondItem="fFd-Q1-DHs" secondAttribute="top" id="HqD-Gk-oBT"/>
+                            <constraint firstItem="xid-Gi-f2U" firstAttribute="leading" secondItem="fFd-Q1-DHs" secondAttribute="leading" constant="16" id="JMP-J5-XUu"/>
+                            <constraint firstItem="xid-Gi-f2U" firstAttribute="leading" secondItem="fFd-Q1-DHs" secondAttribute="leading" constant="16" id="MPD-m3-hKD"/>
+                            <constraint firstItem="Hd8-1J-op8" firstAttribute="top" secondItem="fFd-Q1-DHs" secondAttribute="top" constant="259" id="WaU-ti-UVa"/>
+                            <constraint firstItem="fFd-Q1-DHs" firstAttribute="bottom" secondItem="xid-Gi-f2U" secondAttribute="bottom" constant="20" id="aLf-Gm-KsF"/>
+                            <constraint firstItem="fFd-Q1-DHs" firstAttribute="trailing" secondItem="Hd8-1J-op8" secondAttribute="trailing" constant="178" id="gXe-ba-DvR"/>
+                            <constraint firstItem="fFd-Q1-DHs" firstAttribute="trailing" secondItem="xid-Gi-f2U" secondAttribute="trailing" constant="16" id="lV7-8T-KjV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fFd-Q1-DHs"/>
+                    </view>
+                    <connections>
+                        <outlet property="indicatorView" destination="Hd8-1J-op8" id="heu-oz-869"/>
+                        <outlet property="webView" destination="xid-Gi-f2U" id="OPo-qq-k0g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROF-cc-PrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3265" y="-269"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="uSb-qC-oGD">
+            <objects>
+                <tableViewController storyboardIdentifier="TheaterListController" id="pif-bX-ajk" customClass="TheaterListController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ovu-cg-4Kw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BtV-YA-vHS">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BtV-YA-vHS" id="ee5-bO-64O">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pif-bX-ajk" id="9LE-xJ-2GU"/>
+                            <outlet property="delegate" destination="pif-bX-ajk" id="TUP-wT-UIZ"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="SRi-xj-Haf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3J-rB-OKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="548"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="LqI-WC-gJk">
             <objects>
                 <tableViewController storyboardIdentifier="MovieListController" id="2cM-gM-BSp" customClass="MovieListController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,10 +168,14 @@
                             <outlet property="delegate" destination="2cM-gM-BSp" id="DAq-iQ-97w"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="I52-is-a5S"/>
+                    <connections>
+                        <segue destination="dN0-pt-RUu" kind="show" id="obH-Kh-52i"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ad2-tJ-SsC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1645.5999999999999" y="-244.22788605697153"/>
+            <point key="canvasLocation" x="2508" y="-269"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cbK-If-keH">
@@ -118,6 +194,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUb-lZ-XVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="162" y="56"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="G94-PP-KpX">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cjn-FH-ddM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XNk-dP-BXv">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2cM-gM-BSp" kind="relationship" relationship="viewControllers" id="RSD-Sp-yV4"/>
+                        <segue destination="pif-bX-ajk" kind="relationship" relationship="viewControllers" id="cvF-jT-Vzy"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zK-5A-6ap" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.8" y="54.422788605697157"/>
         </scene>
     </scenes>
 </document>
