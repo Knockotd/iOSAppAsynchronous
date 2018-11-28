@@ -16,6 +16,7 @@
 		259640FC21AB861600A47DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 259640FB21AB861600A47DBE /* Assets.xcassets */; };
 		259640FF21AB861600A47DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 259640FD21AB861600A47DBE /* LaunchScreen.storyboard */; };
 		25A682E321AB8888008478DB /* MovieListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A682E221AB8888008478DB /* MovieListController.swift */; };
+		AAD7670F21AE1CE500C437B5 /* TheaterMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD7670E21AE1CE500C437B5 /* TheaterMapController.swift */; };
 		AAE609CD21ACE4DA00793595 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609CC21ACE4DA00793595 /* DetailViewController.swift */; };
 		AAE609CF21ACF9B800793595 /* TheaterListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609CE21ACF9B800793595 /* TheaterListController.swift */; };
 		AAE609D121AD11FF00793595 /* TheaterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE609D021AD11FF00793595 /* TheaterCell.swift */; };
@@ -33,6 +34,7 @@
 		259640FE21AB861600A47DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2596410021AB861600A47DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25A682E221AB8888008478DB /* MovieListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListController.swift; sourceTree = "<group>"; };
+		AAD7670E21AE1CE500C437B5 /* TheaterMapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterMapController.swift; sourceTree = "<group>"; };
 		AAE609CC21ACE4DA00793595 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		AAE609CE21ACF9B800793595 /* TheaterListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterListController.swift; sourceTree = "<group>"; };
 		AAE609D021AD11FF00793595 /* TheaterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheaterCell.swift; sourceTree = "<group>"; };
@@ -68,6 +70,8 @@
 		259640F021AB861500A47DBE /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				AAD7671121AE1D3E00C437B5 /* 영화관정보 */,
+				AAD7671021AE1CF700C437B5 /* 영화정보 */,
 				259640F121AB861500A47DBE /* AppDelegate.swift */,
 				259640F321AB861500A47DBE /* ViewController.swift */,
 				259640F521AB861500A47DBE /* Main.storyboard */,
@@ -75,14 +79,40 @@
 				259640FD21AB861600A47DBE /* LaunchScreen.storyboard */,
 				2596410021AB861600A47DBE /* Info.plist */,
 				259640F821AB861500A47DBE /* iOSApp.xcdatamodeld */,
+			);
+			path = iOSApp;
+			sourceTree = "<group>";
+		};
+		AAD7671021AE1CF700C437B5 /* 영화정보 */ = {
+			isa = PBXGroup;
+			children = (
 				25A682E221AB8888008478DB /* MovieListController.swift */,
 				251EBBCC21AB9ABF0048CB93 /* MovieVO.swift */,
 				251EBBCE21ABA6840048CB93 /* MovieCell.swift */,
 				AAE609CC21ACE4DA00793595 /* DetailViewController.swift */,
+			);
+			name = "영화정보";
+			path = "영화정보";
+			sourceTree = "<group>";
+		};
+		AAD7671121AE1D3E00C437B5 /* 영화관정보 */ = {
+			isa = PBXGroup;
+			children = (
+				AAD7671221AE205600C437B5 /* 지도 */,
 				AAE609CE21ACF9B800793595 /* TheaterListController.swift */,
 				AAE609D021AD11FF00793595 /* TheaterCell.swift */,
 			);
-			path = iOSApp;
+			name = "영화관정보";
+			path = "영화관정보";
+			sourceTree = "<group>";
+		};
+		AAD7671221AE205600C437B5 /* 지도 */ = {
+			isa = PBXGroup;
+			children = (
+				AAD7670E21AE1CE500C437B5 /* TheaterMapController.swift */,
+			);
+			name = "지도";
+			path = "지도";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAD7670F21AE1CE500C437B5 /* TheaterMapController.swift in Sources */,
 				25A682E321AB8888008478DB /* MovieListController.swift in Sources */,
 				259640F421AB861500A47DBE /* ViewController.swift in Sources */,
 				251EBBCF21ABA6840048CB93 /* MovieCell.swift in Sources */,

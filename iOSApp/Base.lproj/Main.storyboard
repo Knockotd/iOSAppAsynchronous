@@ -136,10 +136,42 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="영화관 목록" id="SRi-xj-Haf"/>
                     <navigationItem key="navigationItem" title="Title" id="GGB-Cs-ZtF"/>
+                    <connections>
+                        <segue destination="1TD-fG-353" kind="show" id="EH1-t9-Dm5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3J-rB-OKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2508" y="547.37631184407803"/>
+        </scene>
+        <!--Theater Map Controller-->
+        <scene sceneID="h1V-GO-hDC">
+            <objects>
+                <viewController storyboardIdentifier="TheaterMapController" id="1TD-fG-353" customClass="TheaterMapController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IwC-Vr-VX6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6yM-GH-7JR">
+                                <rect key="frame" x="16" y="64" width="343" height="583"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4M0-Vh-IMg" firstAttribute="bottom" secondItem="6yM-GH-7JR" secondAttribute="bottom" constant="20" id="DHl-5U-lSi"/>
+                            <constraint firstItem="6yM-GH-7JR" firstAttribute="leading" secondItem="4M0-Vh-IMg" secondAttribute="leading" constant="16" id="JEA-s1-hhc"/>
+                            <constraint firstItem="4M0-Vh-IMg" firstAttribute="trailing" secondItem="6yM-GH-7JR" secondAttribute="trailing" constant="16" id="L7k-x1-tZ7"/>
+                            <constraint firstItem="6yM-GH-7JR" firstAttribute="top" secondItem="4M0-Vh-IMg" secondAttribute="top" id="UZm-ni-eX7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4M0-Vh-IMg"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="6yM-GH-7JR" id="2uC-hn-3DH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jW0-cn-sQI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3264.8000000000002" y="546.47676161919048"/>
         </scene>
         <!--영화 목록-->
         <scene sceneID="LqI-WC-gJk">
@@ -230,6 +262,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="cjn-FH-ddM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XNk-dP-BXv">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

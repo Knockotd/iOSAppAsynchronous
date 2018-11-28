@@ -95,7 +95,19 @@ class TheaterListController: UITableViewController {
         return 137
     }
     
-    
+    //셀을 선택했을 때 호출되는 메소드
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //데이터 찾아오기
+        let theater = self.data[indexPath.row]
+        //하위 뷰 컨트롤러 객체 생성
+        let theaterMapController = self.storyboard?.instantiateViewController(withIdentifier: "TheaterMapController") as! TheaterMapController
+        //데이터 넘겨주기
+        theaterMapController.theater = theater
+        //비동기적으로 푸시
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(theaterMapController, animated: true)
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
